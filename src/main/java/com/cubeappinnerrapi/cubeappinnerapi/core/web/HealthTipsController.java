@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController("healthTipsController_v1")
 @RequestMapping(value = "/api/health-tips")
-//@RequestMapping(value = "/api/users", produces = HealthTipsDto.MEDIA_TYPE)
 public class HealthTipsController {
     private HealthTipsService service;
 
