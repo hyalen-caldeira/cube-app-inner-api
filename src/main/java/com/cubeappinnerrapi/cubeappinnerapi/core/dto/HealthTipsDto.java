@@ -11,5 +11,5 @@ import java.io.Serializable;
 @Setter
 public class HealthTipsDto implements Serializable {
     long id;
-    String tips;
+    String tip;
 }
