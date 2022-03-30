@@ -1,9 +1,10 @@
 package com.cubeappinnerrapi.cubeappinnerapi.core.service;
 
-import com.cubeappinnerrapi.cubeappinnerapi.core.dto.HealthTipsDto;
+import com.cubeappinnerrapi.cubeappinnerapi.core.model.HealthTipsModel;
 
 import java.util.List;
 
 public interface HealthTipsService {
-    List<HealthTipsDto> getAllFirstTenTips();
+    List<HealthTipsModel> getAllHealthTips();
+    List<HealthTipsModel> findByUserId(long id);
 }
