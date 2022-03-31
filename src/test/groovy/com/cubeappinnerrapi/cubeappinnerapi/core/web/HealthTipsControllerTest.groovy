@@ -27,9 +27,15 @@ class HealthTipsControllerTest extends Specification {
     @Autowired
     protected ObjectMapper objectMapper;
 
-    // GET ALL users
+    // GET ALL Health Tips
     def "when get health tips is performed, then the response has status 200 and all health tips will be returned"() {
         expect: "Status is 200"
         mvc.perform(MockMvcRequestBuilders.get("/api/health-tips")).andExpect(MockMvcResultMatchers.status().isOk())
+    }
+
+    // GET ALL Health Tips by user id
+    def "when get health tips by User ID is performed, then the response has status 200 and all user's health tips will be returned"() {
+        expect: "Status is 200"
+        mvc.perform(MockMvcRequestBuilders.get("/api/health-tips/8")).andExpect(MockMvcResultMatchers.status().isOk())
     }
 }

@@ -24,8 +24,8 @@ public class HealthTipsDao {
         return model;
     }
 
-    public HealthTipsModel create(HealthTipsModel model) {
-        model = repository.save(model);
-        return model;
-    }
+//    public HealthTipsModel create(HealthTipsModel model) {
+//        model = repository.save(model);
+//        return model;
+//    }
 }

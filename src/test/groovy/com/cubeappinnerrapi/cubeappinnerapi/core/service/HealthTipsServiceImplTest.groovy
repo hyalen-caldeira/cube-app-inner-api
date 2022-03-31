@@ -18,12 +18,23 @@ class HealthTipsServiceImplTest extends Specification {
         service = new HealthTipsServiceImpl();
     }
 
-    // GET ALL users
-    def "when get all users is performed, then the response has status 200 and all users will be returned"() {
+    // GET ALL health tips
+    def "when get all health tips is performed, then the response has status 200 and all tips will be returned"() {
         var healthTipsDto = null;
 
         when: "A list of health tips is required"
         healthTipsDto = service.getAllHealthTips();
+
+        then: "A list of health tips will be returned"
+        assertNotNull(healthTipsDto)
+    }
+
+    // GET ALL health tips
+    def "when get all health tips by user ID is performed, then the response has status 200 and all user's tips will be returned"() {
+        var healthTipsDto = null;
+
+        when: "A list of health tips is required"
+        healthTipsDto = service.findByUserId(8);
 
         then: "A list of health tips will be returned"
         assertNotNull(healthTipsDto)
